@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sensus Gestão - Guia de Gestão e 5S</title>
+    <link rel="icon" type="image/png" href="assets/application.png">
+    <link rel="stylesheet" href="../css/styles.css">
+    <style>
+        .guide-container { max-width: 1000px; margin: 40px auto; padding: 0 20px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif; }
+        .header-banner { background: #000000; color: #ffffff; padding: 40px; border-radius: 12px; margin-bottom: 40px; text-align: center; }
+        .header-banner h2 { font-size: 28px; margin-bottom: 10px; }
+        .header-banner p { font-size: 14px; opacity: 0.8; }
+        .grid-sections { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-bottom: 40px; }
+        .info-card { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 12px; padding: 30px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+        .info-card h3 { font-size: 18px; margin-top: 0; margin-bottom: 15px; padding-bottom: 10px; border-bottom: 2px solid #f1f5f9; color: #1e293b; }
+        .info-card p { font-size: 13px; color: #64748b; line-height: 1.6; margin-bottom: 15px; }
+        .step-list { list-style: none; padding: 0; margin: 0; }
+        .step-list li { font-size: 13px; color: #64748b; margin-bottom: 12px; padding-left: 24px; position: relative; line-height: 1.5; }
+        .step-list li::before { content: "✓"; position: absolute; left: 0; top: 0; color: #10b981; font-weight: bold; }
+        .footer-copyright { margin-top: 60px; border-top: 1px solid #e2e8f0; padding: 20px 0; text-align: center; font-size: 12px; color: #64748b; line-height: 1.6; }
+        @media (max-width: 768px) { .grid-sections { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <ul class="nav-links">
+            <li><a href="dashboard.html">Visão Geral</a></li>
+            <li><a href="checklist.html">5S (Ambiente)</a></li>
+            <li><a href="cadastro-produto.html">Estoque</a></li>
+            <li><a href="#" style="font-weight: bold; color: #000000;">Importância & Guia</a></li>
+        </ul>
+    </nav>
+
+    <main class="guide-container">
+        
+        <header class="header-banner">
+            <h2>Gestão Inteligente & Metodologia 5S</h2>
+            <p>Descubra como o Sensus Gestão apoia o crescimento organizado do seu pequeno negócio.</p>
+        </header>
+
+        <section style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 12px; padding: 30px; margin-bottom: 40px; text-align: center; box-shadow: 0 1px 3px rgba(0,0,0,0.05);">
+            <h3 style="font-size: 18px; margin-top: 0; margin-bottom: 15px; font-weight: 600; text-align: left; border-bottom: 2px solid #f1f5f9; padding-bottom: 10px; color: #1e293b;">
+                Fluxo Geral de Uso do Sistema
+            </h3>
+            <p style="font-size: 13px; color: #64748b; text-align: left; margin-bottom: 20px;">
+                Abaixo, acompanhe o mapa visual que ilustra a jornada completa do usuário dentro do Sensus Gestão, cobrindo o acesso, monitoramento de indicadores, auditoria prática e o inventário comercial.
+            </p>
+            <div style="padding: 20px; background-color: #f8fafc; border: 1px dashed #e2e8f0; border-radius: 8px; width: 100%; box-sizing: border-box;">
+                <img src="../assets/Mapa%20de%20navegação%20e%20fluxo%20de%20telas.png" alt="Fluxograma Completo" style="max-width: 100%; height: auto; border-radius: 6px;">
+            </div>
+        </section>
+
+        <div class="grid-sections">
+            <article class="info-card">
+                <h3>O Valor das Micro e Pequenas Empresas</h3>
+                <p>As micro e pequenas empresas (MPEs) representam cerca de 99% das organizações do país. Uma gestão comercial simplificada e automatizada organiza as informações de vendas e estoque, gerando controle real para reduzir a sobrecarga do empreendedor.</p>
+            </article>
+
+            <article class="info-card">
+                <h3>Como Aplicar o 5S no seu Negócio</h3>
+                <p>O programa 5S é focado em transformar a qualidade e organização do seu espaço de trabalho:</p>
+                <ul class="step-list">
+                    <li><strong>Utilização (Seiri):</strong> Manter apenas o útil e necessário no local.</li>
+                    <li><strong>Organização (Seiton):</strong> Definir um local certo e identificado para as coisas.</li>
+                    <li><strong>Limpeza (Seiso):</strong> Inspecionar e limpar o ambiente ativamente.</li>
+                    <li><strong>Padronização (Seiketsu):</strong> Criar rotinas visuais estáveis para o espaço físico.</li>
+                    <li><strong>Disciplina (Shitsuke):</strong> Fixar a cultura de conservação no dia a dia.</li>
+                </ul>
+            </article>
+
+            <article class="info-card" style="grid-column: span 2;">
+                <h3>Passo a Passo dos Módulos do Sistema</h3>
+                <p>O Sensus Gestão une o fluxo financeiro ao monitoramento do ambiente físico em três grandes pilares:</p>
+                <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 15px;">
+                    <div style="background: #f8fafc; padding: 15px; border-radius: 8px;">
+                        <strong style="display:block; margin-bottom: 5px; font-size: 14px; color: #1e293b;">1. Painel Geral</strong>
+                        <span style="font-size: 12px; color: #64748b; display: block;">Centralize dados como faturamento e o Índice Geral do 5S do ambiente físico da organização.</span>
+                    </div>
+                    <div style="background: #f8fafc; padding: 15px; border-radius: 8px;">
+                        <strong style="display:block; margin-bottom: 5px; font-size: 14px; color: #1e293b;">2. Avaliação (5S)</strong>
+                        <span style="font-size: 12px; color: #64748b; display: block;">Abra o Checklist e registre as conformidades (0 ou 1) para gerar notas em tempo real para o Ambiente.</span>
+                    </div>
+                    <div style="background: #f8fafc; padding: 15px; border-radius: 8px;">
+                        <strong style="display:block; margin-bottom: 5px; font-size: 14px; color: #1e293b;">3. Inventário Comercial</strong>
+                        <span style="font-size: 12px; color: #64748b; display: block;">Cadastre novos produtos organizando preços, códigos SKU e quantidades de venda.</span>
+                    </div>
+                </div>
+            </article>
+        </div>
+
+        <footer class="footer-copyright">
+            <p><strong>Sensus Gestão</strong> — Sistema Inteligente de Gestão Comercial com Indicadores 5S para Pequenos Negócios.</p>
+            <p>Trabalho de Conclusão de Curso (TCC) em Análise e Desenvolvimento de Sistemas (ADS).</p>
+            <p style="margin-top: 8px; font-weight: 600; color: #000000;">
+                Desenvolvido por: Brendha Kayllany Costa da Conceição, Wesllys Corrêa Cabral e Saranna Vieira Passinho.
+            </p>
+            <p style="margin-top: 4px; opacity: 0.8;">Orientadora: Yonara Costa Magalhães — Universidade Estadual do Maranhão (UEMA).</p>
+            <p style="margin-top: 15px; font-size: 11px; opacity: 0.5;">&copy; 2026 Sensus Gestão. Todos os direitos reservados aos autores.</p>
+        </footer>
+    </main>
+
+</body>
+</html>

@@ -1,0 +1,130 @@
+/* Sensus Gestão - Responsivo */
+:root {
+    --bg-color: #f8f9fa;
+    --card-bg: #ffffff;
+    --text-main: #000000;
+    --text-muted: #666666;
+    --border-color: #e5e5e5;
+    --accent-gray: #f0f0f0;
+    --success-green: #2ecc71;
+    --alert-orange: #ff9800;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-main);
+}
+
+/* Barra de Navegação Semântica (<nav>) */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    background: var(--card-bg);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.brand-circle {
+    width: 16px;
+    height: 16px;
+    background-color: #d9d9d9;
+    border-radius: 50%;
+}
+
+.nav-links {
+    display: flex;
+    gap: 24px;
+    list-style: none;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-main);
+    font-size: 13px;
+}
+
+/* Botões do Protótipo */
+.btn-black {
+    background-color: #000000;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-size: 13px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background 0.2s;
+}
+
+.btn-black:hover { background-color: #222222; }
+
+.btn-outline {
+    background-color: transparent;
+    color: var(--text-main);
+    border: 1px solid var(--border-color);
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.btn-outline:hover { background-color: var(--accent-gray); }
+
+/* Formulários estruturados */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 13px;
+    font-weight: 500;
+    margin-bottom: 6px;
+}
+
+.form-group input, .form-group select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    font-size: 13px;
+    outline: none;
+}
+
+.form-group input:focus { border-color: #000000; }
+
+.help-text {
+    font-size: 11px;
+    color: #999999;
+    margin-top: 4px;
+}
+
+.error-input {
+    border-color: #ff7675 !important;
+    background-color: #fff5f5;
+}
+
+/* Regras de Responsividade*/
+@media (max-width: 768px) {
+    .navbar { padding: 15px 20px; }
+    .nav-links { display: none; } 
+    .stats-grid { flex-direction: column; gap: 15px; }
+    .audit-container { flex-direction: column; }
+    .audit-sidebar { width: 100%; }
+}

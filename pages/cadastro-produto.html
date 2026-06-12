@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sensus Gestão - Estoque</title>
+    <link rel="icon" type="image/png" href="assets/application.png">
+    <link rel="stylesheet" href="../css/styles.css">
+    <style>
+        .container { max-width: 1100px; margin: 40px auto; padding: 0 20px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif; }
+        .grid-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-top: 20px; }
+        .card { background: #ffffff; border: 1px solid #e5e5e5; border-radius: 12px; padding: 24px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+        .card h3 { font-size: 16px; margin-top: 0; margin-bottom: 20px; padding-bottom: 10px; border-bottom: 2px solid #f1f5f9; color: #1e293b; }
+        .form-group { margin-bottom: 15px; }
+        .form-group label { display: block; font-size: 12px; font-weight: 600; color: #475569; margin-bottom: 6px; }
+        .form-group input, .form-group select { width: 100%; padding: 10px; border: 1px solid #cbd5e1; border-radius: 6px; font-size: 13px; box-sizing: border-box; }
+        .form-group .help-text { font-size: 11px; color: #94a3b8; margin-top: 4px; }
+        .stock-table { width: 100%; border-collapse: collapse; font-size: 13px; text-align: left; }
+        .stock-table th { padding: 12px; background: #f8fafc; color: #475569; font-weight: 600; border-bottom: 2px solid #e2e8f0; }
+        .stock-table td { padding: 12px; border-bottom: 1px solid #e2e8f0; color: #334155; }
+        .badge { display: inline-block; padding: 2px 6px; font-size: 11px; font-weight: 600; border-radius: 4px; }
+        .badge-success { background: #dcfce7; color: #15803d; }
+        .badge-danger { background: #fee2e2; color: #ef4444; }
+        .steps-indicator { display: flex; gap: 10px; margin-bottom: 20px; }
+        .step { flex: 1; height: 4px; background: #e2e8f0; border-radius: 2px; }
+        .step.active { background: #000000; }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <ul class="nav-links">
+            <li><a href="dashboard.html">Visão Geral</a></li>
+            <li><a href="checklist.html">5S (Ambiente)</a></li>
+            <li><a href="#" style="font-weight: bold; color: #000000;">Estoque</a></li>
+            <li><a href="sobre-gestao.html">Importância & Guia</a></li>
+        </ul>
+    </nav>
+
+    <main class="container">
+        <header style="margin-bottom: 30px;">
+            <h2 style="font-size: 22px; font-weight: 700; margin-bottom: 5px;">Inventário Comercial</h2>
+            <p style="font-size: 13px; color: #64748b; margin: 0;">Módulo geral para o controle de mercadorias, gestão de quantidades e fluxo de entrada de produtos.</p>
+        </header>
+
+        <div class="grid-layout">
+            <section class="card">
+                <h3>Cadastrar Novo Produto (Etapa 1 de 3)</h3>
+                <div class="steps-indicator">
+                    <div class="step active"></div>
+                    <div class="step"></div>
+                    <div class="step"></div>
+                </div>
+                
+                <form onsubmit="event.preventDefault(); alert('Produto salvo com sucesso!');">
+                    <div class="form-group">
+                        <label>Nome do Produto</label>
+                        <input type="text" placeholder="Ex: Produto Padrão A" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Código SKU</label>
+                        <input type="text" placeholder="Ex: SKU-001-XYZ">
+                    </div>
+                    <div class="form-group">
+                        <label>Categoria do Item</label>
+                        <select>
+                            <option>Selecione uma categoria...</option>
+                            <option>Categoria 01</option>
+                            <option>Categoria 02</option>
+                            <option>Categoria 03</option>
+                        </select>
+                    </div>
+                    <div style="display: flex; gap: 10px; margin-top: 25px;">
+                        <button type="button" class="btn-outline" style="flex: 1;">Avançar Etapa</button>
+                        <button type="submit" class="btn-black" style="flex: 1;">Salvar Produto</button>
+                    </div>
+                </form>
+            </section>
+
+            <section class="card">
+                <h3>Produtos Cadastrados</h3>
+                <p style="font-size: 12px; color: #64748b; margin-top: -15px; margin-bottom: 20px;">Lista geral de itens em inventário.</p>
+                <table class="stock-table">
+                    <thead>
+                        <tr>
+                            <th>Produto / SKU</th>
+                            <th>Categoria</th>
+                            <th>Qtd em Mão</th>
+                            <th>Status Comercial</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Item Comercial Modelo A</strong><br><span style="font-size: 11px; color: #94a3b8;">SKU-001</span></td>
+                            <td>Categoria 01</td>
+                            <td>50 un</td>
+                            <td><span class="badge badge-success">Disponível</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Item Comercial Modelo B</strong><br><span style="font-size: 11px; color: #94a3b8;">SKU-002</span></td>
+                            <td>Categoria 02</td>
+                            <td>15 un</td>
+                            <td><span class="badge badge-success">Disponível</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Item Comercial Modelo C</strong><br><span style="font-size: 11px; color: #94a3b8;">SKU-003</span></td>
+                            <td>Categoria 03</td>
+                            <td>2 un</td>
+                            <td><span class="badge badge-danger">Estoque Baixo</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </div>
+    </main>
+</body>
+</html>
